@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+}
+
+/* Top Bar */
+.topbar {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.nav-icons span {
+  margin-left: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Pages */
+.page {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+/* Stories */
+.stories {
+  display: flex;
+  overflow-x: auto;
+  background: white;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.story {
+  text-align: center;
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+.story img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #e1306c;
+}
+
+/* Feed */
+.feed {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.post {
+  background: white;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.post-header {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.post img {
+  width: 100%;
+}
+
+.actions {
+  padding: 10px;
+  font-size: 22px;
+}
+
+.actions span {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.caption {
+  padding: 0 10px 10px;
+}
+
+/* Profile */
+.profile {
+  text-align: center;
+  padding: 20px;
+  background: white;
+}
+
+.profile-pic {
+  border-radius: 50%;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 15px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.grid img {
+  width: 100%;
+}
+
+/* Panels for DM + Notifications */
+.panel {
+  max-width: 500px;
+  margin: 30px auto;
+  background: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+}

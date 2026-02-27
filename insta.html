@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Instagram Clone</title>
+<link rel="stylesheet" href="insta.css">
+</head>
+
+<body>
+
+<!-- Top Bar -->
+<div class="topbar">
+  <div class="logo">Instagram</div>
+  <div class="nav-icons">
+    <span onclick="showPage('home')">🏠</span>
+    <span onclick="showPage('dm')">💬</span>
+    <span onclick="showPage('notif')">🔔</span>
+    <span onclick="showPage('profile')">👤</span>
+  </div>
+</div>
+
+<!-- HOME PAGE -->
+<div id="home" class="page active">
+
+  <!-- Stories -->
+  <div class="stories">
+    <div class="story"><img src="https://picsum.photos/80?1"><p>You</p></div>
+    <div class="story"><img src="https://picsum.photos/80?2"><p>Ana</p></div>
+    <div class="story"><img src="https://picsum.photos/80?3"><p>Raj</p></div>
+    <div class="story"><img src="https://picsum.photos/80?4"><p>Sam</p></div>
+    <div class="story"><img src="https://picsum.photos/80?5"><p>Mia</p></div>
+  </div>
+
+  <!-- Feed -->
+  <div class="feed">
+
+    <div class="post">
+      <div class="post-header">ana_23</div>
+      <img src="https://picsum.photos/500/400?7">
+      <div class="actions">
+        <span class="like">♡</span>
+        <span>💬</span>
+        <span>✈</span>
+      </div>
+      <div class="caption"><b>ana_23</b> Beach day 🌊</div>
+    </div>
+
+    <div class="post">
+      <div class="post-header">raj.codes</div>
+      <img src="https://picsum.photos/500/400?8">
+      <div class="actions">
+        <span class="like">♡</span>
+        <span>💬</span>
+        <span>✈</span>
+      </div>
+      <div class="caption"><b>raj.codes</b> Debugging life 💻</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- PROFILE PAGE -->
+<div id="profile" class="page">
+
+  <div class="profile">
+    <img class="profile-pic" src="https://picsum.photos/150">
+    <h2>your_username</h2>
+
+    <div class="stats">
+      <div><b>42</b><br>Posts</div>
+      <div><b>1.2k</b><br>Followers</div>
+      <div><b>300</b><br>Following</div>
+    </div>
+
+    <p>Living my best life ✨</p>
+  </div>
+
+  <div class="grid">
+    <img src="https://picsum.photos/300?11">
+    <img src="https://picsum.photos/300?12">
+    <img src="https://picsum.photos/300?13">
+    <img src="https://picsum.photos/300?14">
+    <img src="https://picsum.photos/300?15">
+    <img src="https://picsum.photos/300?16">
+  </div>
+
+</div>
+
+<!-- DM PAGE -->
+<div id="dm" class="page">
+  <div class="panel">
+    <h2>Messages</h2>
+    <p>ana_23: hey 👋</p>
+    <p>raj.codes: send notes pls</p>
+    <p>sam_travel: trip when?</p>
+  </div>
+</div>
+
+<!-- NOTIFICATIONS PAGE -->
+<div id="notif" class="page">
+  <div class="panel">
+    <h2>Notifications</h2>
+    <p>❤️ ana_23 liked your post</p>
+    <p>👤 mia started following you</p>
+    <p>💬 raj commented on your photo</p>
+  </div>
+</div>
+
+<script>
+
+/* Page switching */
+function showPage(pageId){
+  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+  document.getElementById(pageId).classList.add("active");
+}
+
+/* Like button */
+document.querySelectorAll(".like").forEach(btn => {
+  btn.onclick = () => {
+    btn.textContent = "❤";
+    btn.style.color = "red";
+  };
+});
+
+</script>
+
+</body>
+</html>
